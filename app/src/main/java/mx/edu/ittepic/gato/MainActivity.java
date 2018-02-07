@@ -141,4 +141,26 @@ public class MainActivity extends AppCompatActivity {
         btn9.setEnabled(false);
     }
 
+    public void ganador(){
+        if(btn2.getText().toString().equals("X") &&
+                btn3.getText().toString().equals("X") &&
+                btn4.getText().toString().equals("X")){
+        }if(btn1.getText().toString().equals("X") &&
+                btn5.getText().toString().equals("X") &&
+                btn4.getText().toString().equals("X")){
+        }if(btn1.getText().toString().equals("X") &&
+                btn8.getText().toString().equals("X") &&
+                btn9.getText().toString().equals("X")){
+        }if(btn3.getText().toString().equals("X") &&
+                btn8.getText().toString().equals("X") &&
+                btn7.getText().toString().equals("X")){
+        }if(btn8.getText().toString().equals("X") &&
+                btn6.getText().toString().equals("X") &&
+                btn4.getText().toString().equals("X")){
+        }if(btn1.getText().toString().equals("X") &&
+                btn3.getText().toString().equals("X") &&
+                btn6.getText().toString().equals("X")){
+        }
+    }
+
 }
