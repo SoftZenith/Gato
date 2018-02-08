@@ -4,10 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnReiniciar;
     boolean turno = true;
 
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button) findViewById(R.id.button7);
         btn8 = (Button) findViewById(R.id.button8);
         btn9 = (Button) findViewById(R.id.button9);
+        btnReiniciar = (Button) findViewById(R.id.button10);
     }
 
     public void reiniciar(View view){
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn1.setEnabled(false);
+        ganador();
     }
 
     public void dos (View view){
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn2.setEnabled(false);
+        ganador();
     }
 
     public void tres (View view){
@@ -79,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn3.setEnabled(false);
+        ganador();
     }
 
     public void cuatro (View view){
@@ -89,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn4.setEnabled(false);
+        ganador();
     }
 
     public void cinco (View view){
@@ -99,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn5.setEnabled(false);
+        ganador();
     }
 
     public void seis (View view){
@@ -109,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn6.setEnabled(false);
+        ganador();
     }
 
     public void siete (View view){
@@ -119,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn7.setEnabled(false);
+        ganador();
     }
 
     public void ocho (View view){
@@ -129,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn8.setEnabled(false);
+        ganador();
     }
 
     public void nueve (View view){
@@ -139,27 +149,94 @@ public class MainActivity extends AppCompatActivity {
         }
         turno = !turno;
         btn9.setEnabled(false);
+        ganador();
     }
 
     public void ganador(){
+        //Ganador X
         if(btn2.getText().toString().equals("X") &&
                 btn3.getText().toString().equals("X") &&
                 btn4.getText().toString().equals("X")){
-        }if(btn1.getText().toString().equals("X") &&
-                btn5.getText().toString().equals("X") &&
-                btn4.getText().toString().equals("X")){
-        }if(btn1.getText().toString().equals("X") &&
-                btn8.getText().toString().equals("X") &&
-                btn9.getText().toString().equals("X")){
-        }if(btn3.getText().toString().equals("X") &&
-                btn8.getText().toString().equals("X") &&
-                btn7.getText().toString().equals("X")){
-        }if(btn8.getText().toString().equals("X") &&
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn5.getText().toString().equals("X") &&
                 btn6.getText().toString().equals("X") &&
+                btn7.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn1.getText().toString().equals("X") &&
+                btn9.getText().toString().equals("X") &&
+                btn8.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn4.getText().toString().equals("X") &&
+                btn5.getText().toString().equals("X") &&
+                btn1.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn2.getText().toString().equals("X") &&
+                btn6.getText().toString().equals("X") &&
+                btn9.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn7.getText().toString().equals("X") &&
+                btn3.getText().toString().equals("X") &&
+                btn8.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn6.getText().toString().equals("X") &&
+                btn8.getText().toString().equals("X") &&
                 btn4.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
         }if(btn1.getText().toString().equals("X") &&
                 btn3.getText().toString().equals("X") &&
                 btn6.getText().toString().equals("X")){
+            Toast.makeText(this,"Ganador: X", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }
+        // Ganador O
+
+        if(btn2.getText().toString().equals("O") &&
+                btn3.getText().toString().equals("O") &&
+                btn4.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn5.getText().toString().equals("O") &&
+                btn6.getText().toString().equals("O") &&
+                btn7.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn1.getText().toString().equals("O") &&
+                btn9.getText().toString().equals("O") &&
+                btn8.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn4.getText().toString().equals("O") &&
+                btn5.getText().toString().equals("O") &&
+                btn1.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn2.getText().toString().equals("O") &&
+                btn6.getText().toString().equals("O") &&
+                btn9.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn7.getText().toString().equals("O") &&
+                btn3.getText().toString().equals("O") &&
+                btn8.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn6.getText().toString().equals("O") &&
+                btn8.getText().toString().equals("O") &&
+                btn4.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
+        }if(btn1.getText().toString().equals("O") &&
+                btn3.getText().toString().equals("O") &&
+                btn6.getText().toString().equals("O")){
+            Toast.makeText(this,"Ganador: O", Toast.LENGTH_LONG).show();
+            reiniciar(btnReiniciar);
         }
     }
 
